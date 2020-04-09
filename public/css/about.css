@@ -1,0 +1,13 @@
+.container_about {
+    width: 93%;
+    height: auto;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 4px;
+    color: #444;
+  }
+  
+  .container_about p {
+    padding: 5px 0 0 15px;
+    line-height: 1.7em;
+  }
