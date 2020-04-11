@@ -30,11 +30,28 @@
     </section>
 
     		<ul>
-            <li>{!! link_to_route('signup.get', 'ユーザー登録', [], []) !!}</li>
-    		<li><a href="/about">BBLについて</a></li>
-    		<li><a href="">いいい</a></li>
-    		<li><a href="">ううう</a></li>
-    		</ul>
+                <li><a href="/about">BBLについて</a></li>
+                <li><a href="">いいい</a></li>
+                <li><a href="">ううう</a></li>
+            </ul>
+            
+            <ul class="auth_ul">
+                @if (Auth::check())
+                    <li></li>
+                    <li class="nav-item dropdown auth_user_name">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}</a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li class="dropdown-item">{!! link_to_route('users.show', 'マイ プロフィール', ['is' => Auth::id()]) !!}</li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item">{!! link_to_route('logout.get', 'ログアウト',) !!}</li>
+                        </ul>
+                    </li>
+                @else
+                    <li>{!! link_to_route('login.get', 'ログイン', [], []) !!}</li>
+                    <li>{!! link_to_route('signup.get', 'ユーザー登録', [], []) !!}</li>
+                @endif
+            </ul>
+
     </section>
 
     	<div class="clear"></div>

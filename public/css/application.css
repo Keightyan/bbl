@@ -35,7 +35,7 @@
      width: 100%;
      height: 40px;
      margin-bottom: 10px;
-     background-color: #1e83c1;
+     background-color: #00bfff;
      position: absolute;
      top: 0;
    }
@@ -95,6 +95,56 @@
      color: #fff;
      background-color: #2ecc71;
    }
+
+
+
+   #ad {
+    width: 300px;
+    height: 80px;
+    background-color: #ddd;
+    margin: 70px 0 0 20px;
+    float: left;
+  }
+ 
+  #header2 ul {
+   padding-top: 70px;
+   float: right;
+ }
+
+ #header2 ul:last-child {
+   padding-top: 0;
+ }
+ 
+  #header2 ul li {
+   float: left;
+   list-style: none;
+   margin-top: 25px;
+   padding-left: 20px;
+   padding-right: 20px;
+   border-right: 1px solid #000;
+ }
+ 
+  #header2 ul li:first-child {
+   float: left;
+   list-style: none;
+   margin-top: 25px;
+   padding-left: 20px;
+   padding-right: 20px;
+   border-left: 1px solid #000;
+ }
+
+ .auth_ul li {
+   margin-top: 0 !important;
+   margin-bottom: 10px !important;
+ }
+
+ .auth_user_name {
+   padding-left: 20px;
+   padding-right: 20px;
+   border-left: 1px solid #000;
+ }
+
+
   
    #title {
      width: 200px;
@@ -140,36 +190,105 @@
      margin-top: 5px;
    }
   
-   #ad {
+   #ad-login_out-area {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+/* お知らせ */
+    #news {
+     width: 47%;
+     height: 80px;
+     background-color: #fff0f5;
+     margin: 60px 10px 0 0;
+     font-size: .85rem;
+     padding: 5px;
+}
+  
+    #news ul {
+     margin-left: -10px;
+     line-height: 1.7em;
+}
+  
+/* 広告 */
+    /* #ad_header {
      width: 300px;
      height: 80px;
      background-color: #ddd;
-     margin: 60px 0 0 20px;
-     float: left;
+     margin: 60px 0 0 0;
+   } */
+   
+    #ad_nav {
+     width: 150px;
+     height: 300px;
+     background-color: #ddd;
+     margin: 60px auto 0 auto;
    }
-  
-   #header2 ul {
-    padding-top: 70px;
-    float: right;
-  }
-  
-   #header2 ul li {
-    float: left;
-    list-style: none;
-    margin-top: 25px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-right: 1px solid #000;
-  }
-  
-   #header2 ul li:first-child {
-    float: left;
-    list-style: none;
-    margin-top: 25px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-left: 1px solid #000;
-  }
+   
+   #ad_container {
+     width: 75%;
+     height: 80px;
+     background-color: #ddd;
+     margin: 0 auto;
+   }
+   
+   
+/* ログイン状態によって切り替える部分 */   
+    .login_form-area {
+     padding: 30px 0 0 0;
+    }
+    
+    #login-button {
+     font-size: .85rem;
+     padding: .6em;
+}
+
+    #logout-button {
+     margin-top: 50px;
+     margin-left: 328px;
+     font-size: .85rem;
+     padding: .6em;
+}
+
+   .visible-block {
+     display: block;
+}
+   .hidden-block {
+    display: none;
+} 
+   
+   .visible-on-logout {
+    padding-top: 50px;
+}
+
+   .visible-on-logout span {
+    font-size: .8em;
+    padding-left: 5px;
+}
+
+   .login-nav-ul-mt--45 {
+    margin-top: -45px !important; 
+}
+
+   .container .visible-on-logout p {
+       margin: -100px auto 0 auto;
+       text-align: center;
+       background-color: #f0f8ff;
+       border: solid thin #f0f8ff;
+       border-radius: 3px;
+       width: 50%;
+       line-height: 2em;
+       color: #b22222;
+}
+   
+   .container .visible-on-logout p::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f12a";
+    font-weight: 900;
+    padding-right: 10px;
+    color: #b22222;
+}
+
   
   #sp_menu {
     display: none;
@@ -230,7 +349,7 @@
     text-align: center;
     margin-top: 45px;
     position: relative;
-    background-color: #f9d7d7;
+    background-color: #dc143c;
     width: 100%;
     height: 80px;
     margin-top: -46px;
@@ -239,12 +358,22 @@
 
    .post a {
      margin: 0 auto;
+     background-color: #f9d7d7 !important;
+     animation: flash 1s linear 3;
    }
 
    .post a:hover{
-    color: #fff;
     background-color: #dc143c !important;
    }
+   
+@keyframes flash {
+  0%,100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
   
    #left a {
      text-decoration: none;
@@ -252,7 +381,7 @@
      transition: all .3s;
      font-size: 0.85em;
    }
-  
+
    #left ul li a:hover {
      text-decoration: none;
      color: #fff;
@@ -272,7 +401,7 @@
   .container {
     height: auto;
     padding-top: 35px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     border-radius: 4px;
     color: #444;
   }
@@ -353,6 +482,11 @@
      margin-top: 45px;
      margin-left: -40px;
    }
+
+   /* 非ログイン時の処理 */
+   .margin-top-45-none {
+     margin-top: 0;
+   }
   
    nav ul li {
      border-bottom: 1px dashed red;
@@ -414,9 +548,10 @@
     padding-left: 35px;
    }
   
+  /* 
    nav ul li:first-child {
      border-top: 1px dashed red;
-   }
+   } */
   
    nav ul li.pitching {
      background-image: url("../img/ball.png");
@@ -472,10 +607,12 @@
    }
   
    footer {
-      width: 100%;
-      height: 120px;
-      background-color: #1e83c1;
-      position: relative;
+     width: 100%;
+     height: 120px;
+     background-color: #8b4513;
+     position: absolute;
+     bottom: 0;
+     left: 0;
    }
   
    footer h3 {
@@ -523,21 +660,48 @@
    .clearfix {
      clear: both;
    }
-
-
+   
+   
 /* 新着レクチャー */
 
-.new_area-img {
+  .new_area-img {
     position: relative;
 }
 
-.new_area-p {
-  position: absolute;
-  color: white;
-  background-color: #f00;
-  bottom: -8px;
-  left: -20px;
-  height: 22px;
-  font-size: 85%;
-  padding: 0 1px 4px 6px;
+  .new_area-p {
+    position: absolute;
+    color: white;
+    background-color: #f00;
+    bottom: -8px;
+    left: -20px;
+    height: 22px;
+    font-size: 85%;
+    padding: 0 1px 4px 6px;
+}
+
+.pick_category {
+    font-size: .8em;
+    background-color: #17a2b8;
+    padding: 5px;
+    color: #fff;
+}
+
+
+/* 投稿フォーム */
+
+/* プレースホルダー　フォーカス時に消す */
+input::focus::placeholder {
+  color: transparent;
+}
+
+/* フォーム全体 */
+#post_form {
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* カテゴリ（ラジオボタン） */
+.radio-label {
+    padding-right: 20px;
 }
