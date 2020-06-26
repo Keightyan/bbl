@@ -2,6 +2,6 @@
 
 @section('content')
 
-    @include('lectures.lectures')
+    @include('lectures.fieldings.fie_lec')
 
 @endsection

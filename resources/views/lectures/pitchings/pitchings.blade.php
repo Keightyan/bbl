@@ -2,6 +2,6 @@
 
 @section('content')
 
-    @include('lectures.lectures')
+    @include('lectures.pitchings.pit_lec')
 
 @endsection

@@ -2,6 +2,6 @@
 
 @section('content')
 
-    @include('lectures.lectures')
+    @include('lectures.others.oth_lec')
 
 @endsection

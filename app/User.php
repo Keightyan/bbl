@@ -14,9 +14,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+    protected $fillable = ['name', 'sex', 'age', 'throwing', 'batting', 'favorite_team', 'appeal', 'email', 'password'];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -26,4 +24,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function lectures() {
+        return $this->hasMany(Lecture::class);
+    }
 }

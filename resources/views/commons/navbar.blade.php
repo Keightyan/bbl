@@ -17,9 +17,9 @@
     <section id="wrapper">
 
     <section id="header2">
-    	<section id="title">
+    	<section id="bbl-title">
     		<div id="logo">
-          <a href="/"></a>
+          <a href="{{ route('bbl') }}"></a>
     			<h1>BaseBall Library</h1>
     			<p>野球好きが集う知恵袋</p>
     		</div>
@@ -40,10 +40,10 @@
                     <li></li>
                     <li class="nav-item dropdown auth_user_name">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}</a>
-                        <ul class="dropdown-menu dropdown-menu-right">
-                            <li class="dropdown-item">{!! link_to_route('users.show', 'マイ プロフィール', ['is' => Auth::id()]) !!}</li>
+                        <ul class="dropdown-menu dropdown-menu-right dropdown-menu-pt-mb dropdown-menu-position-bottom">
+                            <li class="dropdown-item border-none">{!! link_to_route('users.show', 'マイ プロフィール', ['id' => Auth::id()]) !!}</li>
                             <li class="dropdown-divider"></li>
-                            <li class="dropdown-item">{!! link_to_route('logout.get', 'ログアウト',) !!}</li>
+                            <li class="dropdown-item border-none">{!! link_to_route('logout.get', 'ログアウト') !!}</li>
                         </ul>
                     </li>
                 @else
