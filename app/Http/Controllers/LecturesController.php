@@ -79,6 +79,7 @@ class LecturesController extends Controller
                     'image_path' => $path,
                 ]);
             }
+            dd($path);
         } 
         else {
             $request->user()->lectures()->create([

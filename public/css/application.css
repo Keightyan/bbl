@@ -549,7 +549,7 @@
      margin-left: -35px;
    }
 
-   nav ul li a[href="http://localhost/laravel/bbl/public/pitching"] {
+   nav ul li a[href$=pitching] {
     background-image: url("../img/ball.png");
     background-size: 24px 24px;
     background-repeat: no-repeat;
@@ -558,7 +558,7 @@
     text-decoration: none;
    }
 
-   nav ul li a[href="http://localhost/laravel/bbl/public/batting"] {
+   nav ul li a[href$=batting] {
     background-image: url("../img/bat.png");
     background-size: 24px 24px;
     background-repeat: no-repeat;
@@ -566,7 +566,7 @@
     padding-left: 35px;
    }
 
-   nav ul li a[href="http://localhost/laravel/bbl/public/fielding"] {
+   nav ul li a[href$=fielding] {
     background-image: url("../img/grove.png");
     background-size: 24px 24px;
     background-repeat: no-repeat;
@@ -574,7 +574,7 @@
     padding-left: 35px;
    }
 
-   nav ul li a[href="http://localhost/laravel/bbl/public/running"] {
+   nav ul li a[href$=running] {
     background-image: url("../img/spike.png");
     background-size: 24px 24px;
     background-repeat: no-repeat;
@@ -582,7 +582,7 @@
     padding-left: 35px;
    }
 
-   nav ul li a[href="http://localhost/laravel/bbl/public/mental"] {
+   nav ul li a[href$=mental] {
     background-image: url("../img/heart.png");
     background-size: 24px 24px;
     background-repeat: no-repeat;
@@ -590,7 +590,7 @@
     padding-left: 35px;
    }
 
-   nav ul li a[href="http://localhost/laravel/bbl/public/other"] {
+   nav ul li a[href$=other] {
     background-image: url("../img/other.png");
     background-size: 24px 24px;
     background-repeat: no-repeat;

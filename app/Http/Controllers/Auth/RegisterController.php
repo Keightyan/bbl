@@ -64,10 +64,13 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
-            'sex' => $data['sex'],
+            // sexにデータがなければnullを設定する
+            'sex' => isset($data['sex']) ? $data['sex'] : null,
             'age' => $data['age'],
-            'throwing' => $data['throwing'],
-            'batting' => $data['batting'],
+            // throwingにデータがなければnullを設定する
+            'throwing' => isset($data['throwing']) ? $data['throwing'] : null,
+            // battingにデータがなければnullを設定する
+            'batting' => isset($data['batting']) ? $data['batting'] : null,
             'favorite_team' => $data['favorite_team'],
             'appeal' => $data['appeal'],
             'email' => $data['email'],
