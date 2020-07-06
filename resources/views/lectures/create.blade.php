@@ -37,7 +37,7 @@
           <div class="img-comment_set">
               <div class="form-group">
                   <label class="font-weight-bold">画像</label>
-                      <input type="file" id="file1" name="image[]" class="form-control-file" multiple="multiple">
+                      <input type="file" id="file1" name="image[]" class="form-control-file">
               </div>
               <div class="form-group">
                   <label class="font-weight-bold">コメント</label>

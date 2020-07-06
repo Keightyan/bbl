@@ -13,7 +13,7 @@
                     @foreach ($images as $image)
                         @if ($image->image_path)
                         <figure class="show_post_thumbnail"><div class="new_area-img text-center"><img class="show_image" src="{{ asset('storage/'.$image->image_path) }}"></div></figure>
-                        @else
+                        @elseif ($request->image === null)
                         <figure class="show_post_thumbnail"><div class="new_area-img text-center"><img src="../img/noimage.gif"></div></figure>
                         @endif
                     @endforeach
@@ -39,6 +39,17 @@
                 @else
                 <span class="d-inline-block ml-2 small text-info">投稿者：<a href="{{ route('users.show', ['id' => $lecture->user->id]) }}">{{ $lecture->user->name }}</a></span></div>
                 @endif
+                <div class="mt-2 mb-5 ml-n4">
+                    <ul style="list-style-type: none;">
+                        @foreach ($images as $image)
+                            @if ($image->image_path)
+                            <li style="border: 1px solid #333; width: 40px; height: 40px; display: inline-block;"><img class="show_image-li" src="{{ asset('storage/'.$image->image_path) }}"></li>
+                            @else
+                            <li style="border: 1px solid #333; width: 40px; height: 40px; display: inline-block;"><img src="../img/noimage.gif"></li>
+                            @endif
+                        @endforeach
+                    </ul>
+                </div>
                 <div class="mt-3 mb-5">{{ $lecture->content }}</div>
                 </section>
                 @endif

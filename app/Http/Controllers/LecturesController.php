@@ -63,13 +63,15 @@ class LecturesController extends Controller
                 'content' => $request->content,
             ]);
 
+            $i = 0;
+
             // foreach で $files に入った画像を $file として別個に取り出す
             foreach ($files as $file) {
 
                 $lecture_image = new LectureImage;
 
                 // UNIXタイムスタンプを取得したものと、ユーザーID、オリジナルの拡張子を取得したものとを繋ぎ、ファイル名として $filename に代入
-                $filename = time() . '_' . $lecture->user_id . '.' . $file->getClientOriginalExtension();
+                $filename = time() . $i . '_' . $lecture->user_id . '.' . $file->getClientOriginalExtension();
             
                 // storeAs の第1引数は storage からのパス、第2引数はファイル名、第3引数は利用するストレージ(local、public…など）
                 $path = $file->storeAs('', $filename, ['disk' => 'public']);
@@ -78,9 +80,10 @@ class LecturesController extends Controller
                     'lecture_id' => $lecture_data->id,
                     'image_path' => $path,
                 ]);
+
+                $i++;
             }
-            dd($path);
-        } 
+        }
         else {
             $request->user()->lectures()->create([
                 'category_name' => $request->category_name,

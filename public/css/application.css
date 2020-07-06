@@ -768,8 +768,13 @@
 }
 
 .show_image {
-  max-width: 100%;
+  max-width: 300px;
+  width: 50%;
   object-fit: cover;
+}
+
+.show_image-li {
+  width: 100%;
 }
 
 .tag-pitching {
