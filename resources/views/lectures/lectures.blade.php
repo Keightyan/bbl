@@ -7,8 +7,11 @@
     @if ($loop->index <= 5)
         <div class="col-4">
             <article class="cont_inner_list">
-                @if ($lecture->image)
-                    <a href="{{ route('lectures.show', ['id' => $lecture->id]) }}"><figure class="post_thumbnail"><div class="new_area-img"><img class="thumbnail" src="{{ asset('storage/'.$lecture->image) }}"><p class="new_area-p">NEW！</p></div></figure></a>
+            @php
+                $image = $images->first();
+            @endphp
+                @if ($image)
+                    <a href="{{ route('lectures.show', ['id' => $lecture->id]) }}"><figure class="post_thumbnail"><div class="new_area-img"><img class="thumbnail" src="{{ asset('storage/'.$image->image_path) }}"><p class="new_area-p">NEW！</p></div></figure></a>
                 @else
                     <a href="{{ route('lectures.show', ['id' => $lecture->id]) }}"><figure class="post_thumbnail"><div class="new_area-img"><img src="./img/noimage.gif"><p class="new_area-p">NEW！</p></div></figure></a>
                 @endif

@@ -27,7 +27,7 @@ let count = 1;
 $('#append-img-comment').on('click', () => {
 if ($('.img-comment_set').length < 10) {
     count++;
-    $('#append-img-comment_area').append(`<div class="img-comment_set"><div class="form-group"><label class="font-weight-bold">画像</label><input type="file" name="image[]" id="image${count}" class="form-control-file"></div><div class="form-group"><label class="font-weight-bold">コメント</label><input type="text" class="form-control" maxlength="100" name="moreoptions" id="text-length"></div></div>`);
+    $('#append-img-comment_area').append(`<div class="img-comment_set"><div class="form-group"><label class="font-weight-bold">画像</label><input type="file" name="image[]" id="image${count}" class="form-control-file"></div><div class="form-group"><label class="font-weight-bold">コメント</label><input type="text" class="form-control" maxlength="100" name="comment[]" id="text-length"></div></div>`);
 } else {
     $('#append-img-comment').remove();
     $('.append-img-comment-span').remove();

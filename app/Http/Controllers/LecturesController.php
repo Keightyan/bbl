@@ -47,8 +47,10 @@ class LecturesController extends Controller
 
         $this->validate($request, [
             'category_name' => 'required',
-            'title' => 'required|max:100',
+            'title' => 'required|string|max:100',
             'content' => 'required',
+            'image.*' => 'nullable',
+            'comment.*' => 'nullable|string|max:100',
         ]);
 
         if ($request->hasFile('image') ) {

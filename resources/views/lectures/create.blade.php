@@ -41,7 +41,7 @@
               </div>
               <div class="form-group">
                   <label class="font-weight-bold">コメント</label>
-                      <input type="text" class="form-control" maxlength="100" name="moreoptions" id="text-length">
+                      <input type="text" class="form-control" maxlength="100" name="comment[]" id="text-length">
               </div>
           </div>
           

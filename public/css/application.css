@@ -775,6 +775,7 @@
 
 .show_image-li {
   width: 100%;
+  cursor: pointer;
 }
 
 .tag-pitching {
