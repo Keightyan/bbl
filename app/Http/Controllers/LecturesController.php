@@ -105,6 +105,6 @@ class LecturesController extends Controller
             $lecture->delete();
         }
 
-        return back();
+        return redirect('/');
     }
 }
