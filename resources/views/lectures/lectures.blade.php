@@ -8,7 +8,7 @@
         <div class="col-4">
             <article class="cont_inner_list">
             @php
-                $image = $images->first();
+                $image = $lecture->images->first();
             @endphp
                 @if ($image)
                     <a href="{{ route('lectures.show', ['id' => $lecture->id]) }}"><figure class="post_thumbnail"><div class="new_area-img"><img class="thumbnail" src="{{ asset('storage/'.$image->image_path) }}"><p class="new_area-p">NEW！</p></div></figure></a>

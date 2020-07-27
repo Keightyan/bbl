@@ -7,8 +7,11 @@
             @if ($loop->iteration <= 6)
                 <div class="col-4">
                     <article class="cont_inner_list">
-                        @if ($other->image)
-                        <a href="{{ route('lectures.show', ['id' => $other->id]) }}"><figure class="post_thumbnail"><div class="new_area-img"><img class="thumbnail" src="{{ asset('storage/'.$other->image) }}"><p class="new_area-p">NEW！</p></div></figure></a>
+                    @php
+                        $image = $other->images->first();
+                    @endphp
+                        @if ($image)
+                        <a href="{{ route('lectures.show', ['id' => $other->id]) }}"><figure class="post_thumbnail"><div class="new_area-img"><img class="thumbnail" src="{{ asset('storage/'.$image->image_path) }}"><p class="new_area-p">NEW！</p></div></figure></a>
                         @else
                         <a href="{{ route('lectures.show', ['id' => $other->id]) }}"><figure class="post_thumbnail"><div class="new_area-img"><img src="./img/noimage.gif"><p class="new_area-p">NEW！</p></div></figure></a>
                         @endif
@@ -27,8 +30,11 @@
         @foreach ($others as $other)
                 <div class="col-4">
                     <article class="cont_inner_list">
-                        @if ($other->image)
-                        <a href="{{ route('lectures.show', ['id' => $other->id]) }}"><figure class="post_thumbnail"><div class="new_area-img"><img class="thumbnail" src="{{ asset('storage/'.$other->image) }}"></div></figure></a>
+                    @php
+                        $image = $other->images->first();
+                    @endphp
+                        @if ($image)
+                        <a href="{{ route('lectures.show', ['id' => $other->id]) }}"><figure class="post_thumbnail"><div class="new_area-img"><img class="thumbnail" src="{{ asset('storage/'.$image->image_path) }}"></div></figure></a>
                         @else
                         <a href="{{ route('lectures.show', ['id' => $other->id]) }}"><figure class="post_thumbnail"><div class="new_area-img"><img src="./img/noimage.gif"></div></figure></a>
                         @endif
