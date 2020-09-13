@@ -768,14 +768,16 @@
 }
 
 .show_image {
-  max-width: 300px;
-  width: 50%;
+  max-width: 500px;
+  width: 100%;
   object-fit: cover;
 }
 
 .show_image-li {
   width: 100%;
   cursor: pointer;
+  vertical-align: -webkit-baseline-middle;
+  vertical-align: -moz-middle-with-baseline;
 }
 
 .tag-pitching {
